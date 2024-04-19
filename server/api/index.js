@@ -329,4 +329,4 @@ app.get('/api/favorites/:email/:longitude', async (req, res) => {
     }
 });
 
-module.exports = pool;
+module.exports = app;
