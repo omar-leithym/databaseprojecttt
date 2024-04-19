@@ -30,7 +30,9 @@ pool.getConnection()
     });
 
 module.exports = pool;
-
+app.get("/", (req,res) => {
+    res.json("hello");
+})
 app.post('/register', async (req, res) => {
     const { email, username, gender, birthdate, location, region } = req.body;
     try {
