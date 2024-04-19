@@ -29,7 +29,6 @@ pool.getConnection()
         console.error('Database connection failed:', err);
     });
 
-module.exports = pool;
 app.get("/", (req,res) => {
     res.json("hello");
 })
@@ -329,3 +328,5 @@ app.get('/api/favorites/:email/:longitude', async (req, res) => {
         res.status(500).send({ error: 'Server error', details: error.message });
     }
 });
+
+module.exports = pool;
