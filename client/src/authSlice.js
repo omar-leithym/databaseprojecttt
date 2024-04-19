@@ -20,7 +20,7 @@ const registerUser = async (userData) => {
 };
 
 const loginUser = async (userData) => {
-    const response = await axios.post("https://databaseprojecttt.vercel.app/login", userData);
+    const response = await axios.post("/login", userData);
     if (response.data) {
         localStorage.setItem('user', JSON.stringify(response.data));
     }
